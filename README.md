@@ -1,0 +1,2 @@
+# swastikaProject
+Admission Managment System
