@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ho.css">
+<link  rel="stylesheet"
+  href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="pho">
+
+<ul class="w3-sidebar w3-bar-block" style="background-color: rgb(186, 206, 145);width: 10%;">
+  <li><a class="active w3-bar-item w3-button" href="/home">Home</a></li>
+  <li><a class="w3-bar-item w3-button"href="/astudent">Add Student</a></li>
+  <!-- <li><a class="w3-bar-item " href="courses.html">View Students</a></li> -->
+  <li ><a class="w3-bar-item w3-button" href="/logout">Logout</a></li>
+</ul>
+
+
+    <div class="table table-hover" style="overflow-x:auto; margin-left:15%;">
+        <h2>Students</h2>
+            <table border="1">
+                <tr>
+                    <th>S.N</th>
+                    <th>Name</th>
+                    <th>Parents Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Phone No.</th>
+                    <th>Birth Date</th>
+                    <th>Gender</th>
+                    <th>Course</th>
+                    <th>nob1</th>
+                    <th>yop1</th>
+                    <th>tm1</th>
+                    <th>mo1</th>
+                    <th>div1</th>
+                    <th>pom1</th>
+                    <th>nob2</th>
+                    <th>yop2</th>
+                    <th>tm2</th>
+                    <th>mo2</th>
+                    <th>div2</th>
+                    <th>pom2</th>
+                   
+                    <th>Delete</th>
+                </tr>
+                
+                <%
+                if(userData.length!=0){
+                var i=1;
+                userData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%=i; %></td>
+                    <td><%=data.name %></td>
+                    <td><%=data.pname %></td>
+                    <td><%=data.email %></td>
+                    <td><%=data.address %></td>
+                    <td><%=data.phnno %></td>
+                    <td><%=data.bdate %></td>
+                    <td><%=data.gender %></td>
+                    <td><%=data.course %></td>
+                    <td><%=data.nob1 %></td>
+                    <td><%=data.yop1 %></td>
+                    <td><%=data.tm1 %></td>
+                    <td><%=data.mo1 %></td>
+                    <td><%=data.divs1 %></td>
+                    <td><%=data.pom1 %></td>
+                    <td><%=data.nob2 %></td>
+                    <td><%=data.yop2 %></td>
+                    <td><%=data.tm2 %></td>
+                    <td><%=data.mo2 %></td>
+                    <td><%=data.divs2 %></td>
+                    <td><%=data.pom2 %></td>
+                
+                    <td><a href="/student/edit/<%=data.name%>"><button onclick="myJavascriptFunction(data.id)" type="button">Delete</a></button></td>
+                    <!-- <td><a href="/student1/"><button type="button">Update</a></button></td> -->
+                </tr>
+                <%  i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                <% } %>
+            </table>
+            </div>
+</body>
+
+</html>
+<script>
+    function myJavascriptFunction(id) {
+     console.log(IDBIndex)
+    }
+    </script>

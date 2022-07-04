@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ho.css">
+<link  rel="stylesheet"
+  href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="pho">
+
+<ul class="w3-sidebar w3-bar-block" style="background-color: rgb(186, 206, 145);width: 10%;">
+  <li><a class="active w3-bar-item w3-button" href="/home">Home</a></li>
+  <li><a class="w3-bar-item w3-button" href="/Admission1">Admission</a></li>
+  <!-- <li><a class="w3-bar-item " href="courses.html">View Admission</a></li> -->
+  <li ><a class="w3-bar-item w3-button" href="/logout">Logout</a></li>
+</ul>
+
+
+    <div class="table-data" style="margin-left:25%;overflow-x:auto;">
+        
+            <table border="1">
+                <tr>
+                    <th>S.N</th>
+                    <th>Student Name</th>
+                    <th>Department Name</th>
+                    <th>Course Name</th>
+                    <th>Fee</th>
+                    
+                    <th>Delete</th>
+                </tr>
+                
+                <%
+                if(userData.length!=0){
+                var i=1;
+                userData.forEach(function(data){
+                %>
+                <tr>
+                    <td><%=i; %></td>
+                    <td><%=data.sname %></td>
+                    <td><%=data.dname %></td>
+                    <td><%=data.cname %></td>
+                    <td><%=data.fee %></td>
+                
+                    <td>   <button onclick="myJavascriptFunction(data.id)" type="button">Delete</button></td>
+                    <td><a href="/addmission/edit/<%=data.sname%>">Delete</a></td>
+                </tr>
+                <%  i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                <% } %>
+            </table>
+            </div>
+</body>
+
+</html>
+<script>
+    function myJavascriptFunction(id) {
+     console.log(IDBIndex)
+    }
+    </script>

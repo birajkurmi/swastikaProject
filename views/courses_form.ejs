@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ho.css">
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body >
+
+  <ul class="w3-sidebar w3-dark-grey w3-bar-block" style="width: 10%">
+    <li><a  class="w3-bar-item w3-button" href="/home">Home</a></li>
+    <li><a class="active w3-bar-item " href="/courses_form">Add Courses</a></li>
+    <li ><a class="w3-bar-item w3-button" href="/logout">Logout</a></li>
+  </ul>
+  
+  <div class="main"style="margin-left:25%;">
+      <form action="/course" method="post" style="padding: 30px; ">
+      <h1>Add Courses details</h1>
+      <!-- <select class="box" name="dname" id="dname"  required><option>Department Name</option></select><br><br>
+       --><div>
+      <label for="department">Department Name: 
+    </label>
+    <select name="dpt" id="dpt">
+      <% if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+            <option name="dpt" id="dpt" value='<%=data.name %>'><%=data.name %></option>
+        <%  i++; }) %>
+        <% } else{ %>
+        <% } %>
+    </select>
+  </div><br>
+  
+      <!-- <input class="box" type="text" name="dpt" id="dpt" placeholder="Department Name " required/><br><br> -->
+      Course name:<input class="box" type="text" name="name" id="name" placeholder="Course Name " required/><br><br>
+      Duration:<input class="box" type="number" name="duration" id="duration" placeholder="Duration " required/><br><br>
+      Fees:<input class="box" type="number" name="fees" id="fees" placeholder="Course Fee" required/><br><br>
+      <br>
+      <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="Submit" />   <br>
+      </form>
+      </div>
+  
+      <div class="main"style="margin-left:25%;">
+        <form action="/course" method="get" style="padding: 30px; ">
+        <h1>View Courses</h1>
+        <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="View Courses" />   <br>
+        </form>
+        </div>
+</body>
+</html>
+
+

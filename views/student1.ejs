@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="ho.css">
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body >
+
+  <ul class="w3-sidebar w3-dark-grey w3-bar-block" style="width: 10%">
+    <li><a class="w3-bar-item w3-button" href="/studenthom">Home</a></li>
+    <li><a  class="active w3-bar-item" href="/astudent">Add Student    </a></li>
+    <li ><a class=" w3-bar-item w3-button" href="/logout">Logout</a></li>
+  </ul>
+  
+  <div class="main"style="overflow-x:auto;margin-left:20%;">
+      <form action="/student" method="post" style="padding: 30px; ">
+      <h1>Add Student details</h1>
+      <table style="overflow-x:auto;">
+      <input class="box" type="text" name="name" id="name" placeholder="Name" required/><br><br>
+      <input class="box" type="text" name="pname" id="pname" placeholder="Parents Name " required/><br><br>
+      <!-- <input class="box" type="text" name="address" id="address" placeholder="Address " required/><br><br> -->
+      <input class="box" type="email" name="email" id="email" placeholder="Email " required/><br><br>
+      <textarea name="address" id="address" rows="4" cols="20" placeholder="Address"></textarea><br><br>
+      <input class="box" type="text" name="phnno" id="phnno" placeholder="Phone No " required/><br><br>
+      <input class="box" type="date" name="bdate" id="bdate" placeholder="Birth Date " required/><br><br>
+      <label for="gender" id="gender">Gender: 
+      <input type="radio" name="gender" value="male"> Male  <input type="radio" name="gender" value="female"> Female
+     </label><br><br>
+     <label for="course">Course Name: 
+    </label>
+    <select name="course" id="course">
+      <% if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+            <option name="course" id="course" value='<%=data.name %>'><%=data.name %></option>
+        <%  i++; }) %>
+        <% } else{ %>
+        <% } %>
+    </select>
+  </div><br>
+     <!--<input class="box" type="text" name="course" id="course" placeholder="Course " required/><br><br> -->
+    <table style="overflow-x:auto;">
+      <thead>
+          <tr>
+               <th><font style="font-family: Verdana;font-size: small">Exam</font> <br><font style="font-family: Verdana; font-size: small">passed</font></th>
+               <th><font style="font-family: Verdana;font-size: small">Name of</font> <br><font style="font-family: Verdana;font-size: small">Board/University</font></th>
+               <th><font style="font-family: Verdana;font-size: small">Year of</font> <br><font style="font-family: Verdana;font-size: small"> Passing</font></th>
+               <th><font style="font-family: Verdana;font-size: small">Total</font><br><font style="font-family: Verdana;font-size: small"> Mark</font></th>
+               <th><font style="font-family: Verdana;font-size: small">Mark</font> <br><font style="font-family: Verdana;font-size: small">Obtained</font></th>
+               <th><font style="font-family: Verdana;font-size: small">Division</font></th>
+               <th><font style="font-family: Verdana;font-size: small">% of</font><br><font style="font-family: Verdana;font-size: small"> Marks</font></th>
+         </tr>   
+      </thead>
+       <tbody>
+      <tr>
+          <td>10th Details:</td>
+          <td><input type="text" id="nob1" name="nob1" required="true"></td>
+          <td><input type="text" id="yop1" name="yop1" class="actab" required="true"></td>
+          <td><input type="text" id="tm1" name="tm1" class="actab" required="true"></td>
+          <td><input type="text" id="mo1" name="mo1" class="actab" required="true"></td>
+          <td><input type="text" id="divs1" name="divs1" class="actab" required="true"></td>
+          <td><input type="text" id="pom1" name="pom1" class="actab" required="true"></td>
+      </tr>
+      <tr>
+          <td>12th/Diploma:</td>
+          <td><input type="text" id="nob2" name="nob2" required="true"></td>
+          <td><input type="text" id="yop2" name="yop2" class="actab" required="true"></td>
+          <td><input type="text" id="tm2" name="tm2" class="actab" required="true"></td>
+          <td><input type="text" id="mo2" name="mo2" class="actab" required="true"></td>
+          <td><input type="text" id="divs2" name="divs2" class="actab" required="true"></td>
+          <td><input type="text" id="pom2" name="pom2" class="actab" required="true"></td>
+      </tr> 
+       </tbody>
+  </table>
+      <br>
+      <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="Submit" />   <br>
+      </form>
+      </div></table>
+  
+</body>
+</html>
+
+

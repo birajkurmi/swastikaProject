@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> login Form</title>
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/css/bootstrap.min.css
+">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta2/js/bootstrap.min.js">
+<style>
+   .btn-color{
+  background-color: #0e1c36;
+  color: #fff;
+  
+}
+
+.profile-image-pic{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+
+
+.cardbody-color{
+  background-color: #ebf2fa;
+}
+
+a{
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+   <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h2 class="text-center text-dark mt-5">Login Form</h2>
+          <div class="text-center mb-5 text-dark"><a href="/index" class="text-dark fw-bold"> back </a></div>
+          <div class="card my-3">
+            <form action="/login" method="post" class="card-body cardbody-color p-lg-3">
+   
+              <div class="text-center">
+                <img src="https://cdn.pixabay.com/photo/2016/03/31/19/56/avatar-1295397__340.png" class="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
+                  width="100px" alt="profile">
+              </div>
+              <div class="mb-3 "><i class="fa fa-envelope" aria-hidden="true"></i>
+                <input type="text" name="roll" id="roll" class="form-control" aria-describedby="emailHelp" placeholder="User Name" required>
+              </div>
+              <div class="mb-3" ><i class="fa fa-lock" aria-hidden="true"></i>
+                <input type="password" name="password" id="password" class="form-control" placeholder="password" required>
+              </div>
+              <div class="mb-3" >
+                <label class="mb-3" for="types">Choose a user type</label> 
+                <select class="mb-4 text-center" name="type" id="type">
+                  <option value="admin"> Admin</option>
+                  <option value="student">Student</option>
+                </select>
+              </div>
+              <div class="text-center">
+                 <button type="submit" class="btn btn-color px-5 mb-5 w-100" id="submitDetails" name="submitDetails">Login</button></div>
+              <div id="emailHelp" class="form-text text-center mb-5 text-dark">Not
+                Registered? <a href="/signup" class="text-dark fw-bold"> Create an
+                  Account</a>
+              </div>
+            </form>
+          </div>
+   
+        </div>
+      </div>
+    </div>
+</body>
+</html>

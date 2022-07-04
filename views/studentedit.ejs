@@ -1,0 +1,15 @@
+<html>
+    <body>
+       
+
+        <form action="/login" method="post">
+            <h2>Update  <%=userData.roll %>'s imformation  </h2>
+            <input class="box" type="text" name="name" id="name" value= <%=userData.name %> required /><br>
+            <input class="box" type="email" name="email" id="email" value= <%=userData.email %> required /><br>
+            <input class="box" type="text" name="address" id="address" value= <%=userData.address %> required /><br>
+            <input class="box" type="text" name="course" id="course" value= <%=userData.course %> required /><br>
+          
+            <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="Update" />   <br>
+            </form>
+    </body>
+</html>

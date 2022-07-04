@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ho.css">
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body >
+
+  <ul class="w3-sidebar w3-dark-grey w3-bar-block" style="width: 10%">
+    <li><a  class="w3-bar-item w3-button" href="/home">Home</a></li>
+    <li><a class="active w3-bar-item " href="/acriteria">Add Criteria</a></li>
+    <li ><a class="w3-bar-item w3-button" href="/logout">Logout</a></li>
+  </ul>
+  
+  <div class="main"style="margin-left:20%;">
+      <form action="/criteria" method="post" style="padding: 30px; ">
+      <h2>Add Criteria details</h2>
+      <!-- <select class="box" name="dname" id="dname"  required><option>Department Name</option></select><br><br>
+       -->
+       <input class="box" type="text" name="sname" id="sname" placeholder="Student Name " required/><br><br>
+       <input class="box" type="text" name="dname" id="dname" placeholder="Department Name " required/><br><br>
+      <input class="box" type="text" name="cname" id="cname" placeholder="Course Name " required/><br><br>
+      <input class="box" type="text" name="eligibility" id="eligibility" placeholder="Eligibility " required/><br>
+      <br>
+      <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="Submit" />   <br>
+      </form>
+      </div>
+  
+      <div class="main"style="margin-left:20%;">
+        <form action="/criteria" method="get" style="padding: 30px; ">
+        <h2>View Criteria</h2>
+        <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="View Criteria" />   <br>
+        </form>
+        </div>
+</body>
+</html>
+
+

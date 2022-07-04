@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="ho.css">
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<ul class="w3-sidebar w3-dark-grey w3-bar-block p-2" style="width: 10%;">
+  <li><a  class="w3-bar-item w3-button" href="/home">Home</a></li>
+  <li><a class=" active w3-bar-item" href="/departments">Add Department</a></li>
+  <li ><a class="w3-bar-item w3-button"href="/logout">Logout</a></li>
+</ul>
+
+<div class="main">
+  <div style="margin-left:25%;">
+    <form action="/department" method="post" style="padding: 30px; ">
+    <h1>Add Department details</h1>
+    <input class="box" type="text" name="name" id="name" placeholder="Department Name" required /><br><br>
+    <input class="box" type="text" name="description" id="description" placeholder="description" required/><br><br>
+    <br>
+    <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="Submit" />   <br>
+    </form>
+    </div>
+  </div>
+    <div class="main" style="margin-left:25%;">
+      <form action="/department" method="get" style="padding: 30px; ">
+      <h1>View departments</h1>
+      <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="View Departments" />   <br>
+      </form>
+      </div>
+</body>
+</html>
+
+
