@@ -15,13 +15,26 @@ href="https://www.w3schools.com/w3css/4/w3.css">
   
   <div class="main"style="margin-left:20%;">
       <form action="/criteria" method="post" style="padding: 30px; ">
-      <h2>Add Criteria details</h2>
+      <h2>Add Criteria</h2>
       <!-- <select class="box" name="dname" id="dname"  required><option>Department Name</option></select><br><br>
        -->
-       <input class="box" type="text" name="sname" id="sname" placeholder="Student Name " required/><br><br>
+       <label for="student">Student Name: 
+      </label>
+      <select name="student" id="student">
+        <% if(userData.length!=0){
+          var i=1;
+          userData.forEach(function(data){
+          %>
+              <option name="student" id="student" value='<%=data.name %>'><%=data.name %></option>
+          <%  i++; }) %>
+          <% } else{ %>
+          <% } %>
+      </select><br><br>
+       <!-- <input class="box" type="text" name="sname" id="sname" placeholder="Student Name " required/><br><br>
        <input class="box" type="text" name="dname" id="dname" placeholder="Department Name " required/><br><br>
-      <input class="box" type="text" name="cname" id="cname" placeholder="Course Name " required/><br><br>
-      <input class="box" type="text" name="eligibility" id="eligibility" placeholder="Eligibility " required/><br>
+      <input class="box" type="text" name="cname" id="cname" placeholder="Course Name " required/><br><br> -->
+      <input type="radio" name="eligibility" value="eligible"> Eligible  <input type="radio" name="eligibility" value="noteligible"> Not Eligible
+      <!-- <input class="box" type="text" name="eligibility" id="eligibility" placeholder="Eligibility " required/><br> -->
       <br>
       <input type="submit" id="submitDetails" name="submitDetails" class="registerbtn" value="Submit" />   <br>
       </form>

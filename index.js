@@ -198,7 +198,12 @@ app.post('/login', function(req,res){
  });
  //admin criteria
  app.get('/acriteria',function(req,res){
-   return res.render('pages/criteria');
+  db.collection('student').find().toArray(function(err, items){
+    if (err) throw err;
+    res.render('acriteria', { title: 'User List', userData: items});
+   // return res.send(items);
+    }); 
+   //return res.render('pages/student');
  });
  //admin admission
  app.get('/Admission1',function(req,res){
@@ -429,7 +434,7 @@ app.get('/student', function(req,res){
 //get
 app.get('/student1', function(req,res){
 
-   db.collection('student').find().toArray(function(err, items){
+   db.collection('course').find().toArray(function(err, items){
     if (err) throw err;
     res.render('student1', { title: 'User List', userData: items});
    // return res.send(items);
